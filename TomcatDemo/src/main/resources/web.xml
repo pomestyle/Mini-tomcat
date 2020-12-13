@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app>
+
+    <!-- v3版本   单线程  多个请求会阻塞   -->
+    <!-- <servlet>
+         <servlet-name>test</servlet-name>
+         <servlet-class>com.udeam.v3.service.MyServlet</servlet-class>
+     </servlet>-->
+
+
+    <!--   v4版本 多线程 不阻塞-->
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>com.udeam.v4.MyServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+</web-app>
