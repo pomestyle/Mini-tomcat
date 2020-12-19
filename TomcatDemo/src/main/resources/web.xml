@@ -3,7 +3,7 @@
 
     <!-- v3版本   单线程  多个请求会阻塞   -->
     <!-- <servlet>
-         <servlet-name>test</servlet-name>
+         <servlet-name>server</servlet-name>
          <servlet-class>com.udeam.v3.service.MyServlet</servlet-class>
      </servlet>-->
 

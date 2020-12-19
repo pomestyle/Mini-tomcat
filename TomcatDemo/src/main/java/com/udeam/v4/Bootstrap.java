@@ -96,7 +96,7 @@ public class Bootstrap {
             List<Element> selectNodes = rootElement.selectNodes("//servlet");
             for (int i = 0; i < selectNodes.size(); i++) {
                 Element element = selectNodes.get(i);
-                // <servlet-name>test</servlet-name>
+                // <servlet-name>server</servlet-name>
                 Element servletnameElement = (Element) element.selectSingleNode("servlet-name");
                 String servletName = servletnameElement.getStringValue();
                 Element servletclassElement = (Element) element.selectSingleNode("servlet-class");
@@ -104,7 +104,7 @@ public class Bootstrap {
 
                 // 根据servlet-name的值找到url-pattern
                 Element servletMapping = (Element) rootElement.selectSingleNode("/web-app/servlet-mapping[servlet-name='" + servletName + "']");
-                // /test
+                // /server
                 String urlPattern = servletMapping.selectSingleNode("url-pattern").getStringValue();
                 servletMap.put(urlPattern, (HttpServlet) Class.forName(servletClass).newInstance());
 

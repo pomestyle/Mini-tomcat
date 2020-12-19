@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="8005" shutdown="SHUTDOWN">
+
+    <Service name="Catalina">
+
+        <!--        启动端口-->
+        <Connector port="8080"/>
+
+        <Engine>
+
+            <!--      虚拟主机-->
+            <Host name="localhost"
+                  appBase="/Users/pilgrim/Desktop/训练营/阶段2/任务1/作业/Mini-tomcat-main/TomcatDemo/src/webapps"
+                  unpackWARs="true" autoDeploy="true">
+
+            </Host>
+
+        </Engine>
+    </Service>
+
+
+</Server>

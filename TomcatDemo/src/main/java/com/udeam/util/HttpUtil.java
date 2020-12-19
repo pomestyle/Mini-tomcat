@@ -42,7 +42,8 @@ public class HttpUtil {
      * @return
      */
     public static String resp_200(String content) {
-        return addHeadParam(content.length()) + content;
+        String resul = addHeadParam(content.length()) + content;
+        return resul;
     }
 
 }
